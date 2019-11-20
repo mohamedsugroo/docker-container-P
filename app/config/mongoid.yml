@@ -1,0 +1,26 @@
+development:
+  clients:
+    default:
+      database: pesso_development
+      hosts:
+        - db:27017
+      options:
+  options:
+
+test:
+  clients:
+    default:
+      database: app_test
+      hosts:
+        - db:27017
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
+
+production:
+  clients:
+    default:
+      database: pesso_production
+      hosts:
+        - db:27017
